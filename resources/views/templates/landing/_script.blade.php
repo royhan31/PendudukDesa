@@ -1,0 +1,16 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="{{ asset('assets/landing/js/jquery.easing.1.3.js')}}"></script>
+<script src="{{ asset('assets/landing/js/detectmobilebrowser.js')}}"></script>
+<script src="{{ asset('assets/landing/js/isotope.pkgd.min.js')}}"></script>
+<script src="{{ asset('assets/landing/js/wow.min.js')}}"></script>
+<script src="{{ asset('assets/landing/js/waypoints.js')}}"></script>
+<script src="{{ asset('assets/landing/js/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('assets/landing/js/jquery.nicescroll.min.js')}}"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="{{ asset('assets/landing/js/gmaps.js')}}"></script>
+<script src="{{ asset('assets/landing/libs/owl-carousel/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('assets/landing/libs/materialize/js/materialize.min.js')}}"></script>
+<script src="{{ asset('assets/landing/libs/jwplayer/jwplayer.js')}}"></script>
+<script src="{{ asset('assets/landing/libs/sweetalert/sweet-alert.min.js')}}"></script>
+<script src="{{ asset('assets/landing/js/common.js')}}"></script>
+<script src="{{ asset('assets/landing/js/main.js')}}"></script>
