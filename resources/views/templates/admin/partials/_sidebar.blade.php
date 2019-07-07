@@ -34,10 +34,10 @@
             <span class="menu-title" data-i18n="">Data Penduduk</span>
           </a>
           <ul class="menu-content">
-              <li class="@if (request()->is('penduduk'))
+              <li class="@if (request()->is('penduduk') || request()->is('penduduk/tambah') || request()->is('penduduk/edit/*') || request()->is('penduduk/tampil/*'))
                  active
                  @endif">
-                <a class="menu-item" href="{{route('person')}}">
+                <a class="menu-item" href="{{route('penduduk')}}">
                   <i class="material-icons">person</i>
                   <span data-i18n="">Penduduk</span>
                 </a>
@@ -45,7 +45,7 @@
               <li class="@if (request()->is('keluarga'))
                  active
                  @endif">
-                <a class="menu-item" href="{{route('family')}}">
+                <a class="menu-item" href="{{route('keluarga')}}">
                   <i class="material-icons">people</i>
                   <span data-i18n="">Kartu Keluarga</span>
                 </a>

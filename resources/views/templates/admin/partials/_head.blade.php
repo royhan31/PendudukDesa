@@ -36,6 +36,7 @@
   <!-- END: Theme CSS-->
 
   <!-- BEGIN: Page CSS-->
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/css/core/menu/menu-types/material-vertical-menu-modern.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/css/pages/login-register.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/css/core/menu/menu-types/material-vertical-menu-modern.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/fonts/simple-line-icons/style.min.css')}}">
