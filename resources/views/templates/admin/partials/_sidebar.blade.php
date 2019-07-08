@@ -42,7 +42,7 @@
                   <span data-i18n="">Penduduk</span>
                 </a>
               </li>
-              <li class="@if (request()->is('keluarga'))
+              <li class="@if (request()->is('keluarga') || request()->is('keluarga/tambah') || request()->is('keluarga/tampil/*') || request()->is('keluarga/edit/*'))
                  active
                  @endif">
                 <a class="menu-item" href="{{route('keluarga')}}">

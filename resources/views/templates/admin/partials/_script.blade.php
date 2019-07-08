@@ -3,6 +3,7 @@
 <!-- BEGIN Vendor JS-->
 
 <!-- BEGIN: Page Vendor JS-->
+<script src="{{ asset('assets/admin/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
 <script src="{{ asset('assets/admin/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js')}}"></script>
 <script src="{{ asset('assets/admin/app-assets/vendors/js/forms/icheck/icheck.min.js')}}"></script>
 
@@ -10,7 +11,6 @@
 <script src="{{ asset('assets/admin/app-assets/vendors/js/charts/raphael-min.js')}}"></script>
 <script src="{{ asset('assets/admin/app-assets/vendors/js/charts/morris.min.js')}}"></script>
 <script src="{{ asset('assets/admin/app-assets/vendors/js/timeline/horizontal-timeline.js')}}"></script>
-<script src="{{ asset('assets/admin/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
 <script src="{{ asset('assets/admin/app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js')}}"></script>
 <script src="{{ asset('assets/admin/app-assets/vendors/js/tables/buttons.flash.min.js')}}"></script>
 <script src="{{ asset('assets/admin/app-assets/vendors/js/tables/jszip.min.js')}}"></script>
@@ -31,6 +31,7 @@
 @if(Request::is('/login'))
 <script src="{{ asset('assets/admin/app-assets/js/scripts/forms/form-login-register.min.js')}}"></script>
 @endif
+ <script src="{{ asset('assets/admin/app-assets/js/scripts/tables/material-datatable.min.js')}}"></script>
  <script src="{{ asset('assets/admin/app-assets/js/scripts/tables/datatables/datatable-advanced.min.js')}}"></script>
 <!-- END: Page JS-->
 

@@ -18,13 +18,13 @@
 
   <!-- BEGIN: Vendor CSS-->
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/material-vendors.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/weather-icons/climacons.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/fonts/meteocons/style.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/charts/morris.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/charts/chartist.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/forms/icheck/icheck.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/forms/icheck/custom.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
   <!-- END: Vendor CSS-->
 
   <!-- BEGIN: Theme CSS-->

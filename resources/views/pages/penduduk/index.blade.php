@@ -58,7 +58,7 @@
               <div class="card-content collapse show">
                   <div class="card-body card-dashboard dataTables_wrapper dt-bootstrap">
                       <div class="table-responsive">
-                          <table class="table table-striped table-bordered">
+                          <table class="table table-striped table-bordered material-table">
                               <thead>
                                   <tr>
                                       <th>No</th>
@@ -112,7 +112,7 @@
                                           <h5>Apakah Anda akan menghapus penduduk dengan nama <strong>{{$penduduk->nama}}</strong></h5>
                                         </div>
                                         <div class="modal-footer">
-                                          <form class="" action="{{route('penduduk.destroy', $penduduk)}}" method="post">
+                                          <form class="" action="{{route('penduduk.hapus', $penduduk)}}" method="post">
                                             @csrf
                                             @method('PATCH')
                                             <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Batal</button>

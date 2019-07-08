@@ -14,7 +14,7 @@ class Penduduk extends Model
       return $umur;
     }
 
-    public function keluarga(){
-      return $this->hasMany(Keluarga::class);
+    public function keluargas(){
+      return $this->hasMany(Keluarga::class,'id_penduduk','id');
     }
 }

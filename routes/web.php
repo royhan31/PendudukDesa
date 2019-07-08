@@ -27,8 +27,13 @@ Route::group(['prefix' => 'penduduk'], function(){
   Route::get('/tampil/{penduduk}','PendudukController@show')->name('penduduk.tampil');
   Route::get('/edit/{penduduk}','PendudukController@edit')->name('penduduk.edit');
   Route::patch('/edit/{penduduk}','PendudukController@update')->name('penduduk.update');
-  Route::patch('/hapus/{penduduk}','PendudukController@destroy')->name('penduduk.destroy');
+  Route::patch('/hapus/{penduduk}','PendudukController@destroy')->name('penduduk.hapus');
 });
 Route::group(['prefix' => 'keluarga'], function(){
   Route::get('/','KeluargaController@index')->name('keluarga');
+  Route::get('/tambah','KeluargaController@create')->name('keluarga.tambah');
+  Route::post('/tambah','KeluargaController@store')->name('keluarga.simpan');
+  Route::get('/edit/{keluarga}','KeluargaController@edit')->name('keluarga.edit');
+  Route::get('/tampil/{keluarga}','KeluargaController@show')->name('kelurga.tampil');
+  Route::post('/hapus/{keluarga}','KeluargaController@destroy')->name('keluarga.hapus');
 });

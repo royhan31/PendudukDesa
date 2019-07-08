@@ -8,8 +8,8 @@ class Keluarga extends Model
 {
     protected $guarded = [];
 
-    public function penduduks(){
-      return $this->belongsTo(Penduduk::class);
+    public function penduduk(){
+      return $this->belongsTo(Penduduk::class,'id_penduduk','id');
     }
 
 }

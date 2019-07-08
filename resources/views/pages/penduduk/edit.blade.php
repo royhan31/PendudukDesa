@@ -39,7 +39,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="userinput1">NIK</label>
-                    <input type="text" onkeypress="return hanyaAngka(event)" value="{{old('nik',$penduduk->nik)}}" class="form-control @error('nik') border-danger is-invalid @enderror" placeholder="Masukan NIK" name="nik" autofocus>
+                    <input type="text" onkeypress="return hanyaAngka(event)" value="{{old('nik',$penduduk->nik)}}" class="form-control @error('nik') border-danger is-invalid @enderror" placeholder="Masukan NIK" name="nik" autofocus required>
                     @error('nik')
                         <span class="invalid-feedback" role="alert">
                             <strong>@if($message == 'validation.min.string')
@@ -55,7 +55,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" class="form-control @error('nama') border-danger is-invalid @enderror" value="{{old('nama', $penduduk->nama)}}" placeholder="Masukan Nama" name="nama" autofocus>
+                    <input type="text" class="form-control @error('nama') border-danger is-invalid @enderror" value="{{old('nama', $penduduk->nama)}}" placeholder="Masukan Nama" name="nama" autofocus required>
                     @error('nama')
                         <span class="invalid-feedback" role="alert">
                             <strong>Nama Minimal 3 karakter</strong>
@@ -68,13 +68,13 @@
                     <label>Jenis Kelamin</label>
                     <div class="input-group">
                     <div class="d-inline-block custom-control custom-radio mr-1">
-												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Laki-laki" id="Laki-laki"
+												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Laki-laki" id="Laki-laki" required
                         @if($penduduk->jenis_kelamin == 'Laki-laki') checked @endif
                          {{(old('jenis_kelamin') == 'Laki-laki') ? 'checked' : ''}}>
 												<label class="custom-control-label" for="Laki-laki">Laki-laki</label>
 											</div>
 											<div class="d-inline-block custom-control custom-radio">
-												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Perempuan" id="Perempuan"
+												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Perempuan" id="Perempuan" required
                         @if($penduduk->jenis_kelamin == 'Perempuan') checked @endif
                         {{(old('jenis_kelamin') == 'Perempuan') ? 'checked' : ''}}>
 												<label class="custom-control-label" for="Perempuan">Perempuan</label>
@@ -85,7 +85,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Tempat Lahir</label>
-                    <input type="text" class="form-control @error('tempat_lahir') border-danger is-invalid @enderror" value="{{old('tempat_lahir', $penduduk->tempat_lahir)}}" placeholder="Masukan Tempat Lahir" name="tempat_lahir">
+                    <input type="text" class="form-control @error('tempat_lahir') border-danger is-invalid @enderror" value="{{old('tempat_lahir', $penduduk->tempat_lahir)}}" placeholder="Masukan Tempat Lahir" name="tempat_lahir" required>
                     @error('tempat_lahir')
                         <span class="invalid-feedback" role="alert">
                             <strong>Tempat Lahir Terlalu Pendek</strong>
@@ -98,13 +98,13 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Tanggal Lahir</label>
-                    <input type="date" value="{{old('tgl_lahir',$penduduk->tgl_lahir)}}" class="form-control border-primary" name="tgl_lahir">
+                    <input type="date" value="{{old('tgl_lahir',$penduduk->tgl_lahir)}}" class="form-control border-primary" name="tgl_lahir" required>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Agama</label>
-                    <select name="agama" class="form-control">
+                    <select name="agama" class="form-control" required>
   											<option value="Islam"
                         @if($penduduk->agama == 'Islam') selected @endif
                          {{(old('agama') == 'Islam') ? 'selected' : ''}}>Islam</option>
@@ -123,7 +123,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Pendidikan</label>
-                    <select name="pendidikan" class="form-control">
+                    <select name="pendidikan" class="form-control" required>
   											<option value="SD"
                         @if($penduduk->pendidikan == 'SD') selected @endif
                          {{(old('pendidikan') == 'SD') ? 'selected' : ''}}>SD</option>
@@ -148,7 +148,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Pekerjaan</label>
-                    <input type="text" class="form-control @error('pekerjaan') border-danger is-invalid @enderror" value="{{old('pekerjaan', $penduduk->pekerjaan)}}" placeholder="Masukan Pekerjaan" name="pekerjaan">
+                    <input type="text" class="form-control @error('pekerjaan') border-danger is-invalid @enderror" value="{{old('pekerjaan', $penduduk->pekerjaan)}}" placeholder="Masukan Pekerjaan" name="pekerjaan" required>
                     @error('pekerjaan')
                         <span class="invalid-feedback" role="alert">
                             <strong>Pekerjaan Terlalu Pendek</strong>
@@ -163,13 +163,13 @@
                     <label>Status Perkawinan</label>
                     <div class="input-group">
                     <div class="d-inline-block custom-control custom-radio mr-1">
-                        <input type="radio" name="perkawinan" class="custom-control-input" value="Menikah" id="Menikah"
+                        <input type="radio" name="perkawinan" class="custom-control-input" value="Menikah" id="Menikah" required
                           @if($penduduk->perkawinan == 'Menikah') checked @endif
                         {{(old('perkawinan') == 'Menikah') ? 'checked' : ''}}>
                         <label class="custom-control-label" for="Menikah">Menikah</label>
                       </div>
                       <div class="d-inline-block custom-control custom-radio">
-                        <input type="radio" name="perkawinan" class="custom-control-input" value="Belum Menikah" id="Belum"
+                        <input type="radio" name="perkawinan" class="custom-control-input" value="Belum Menikah" id="Belum" required
                         @if($penduduk->perkawinan == 'Belum Menikah') checked @endif
                         {{(old('perkawinan') == 'Belum Menikah') ? 'checked' : ''}}>
                         <label class="custom-control-label" for="Belum">Belum Menikah</label>
@@ -180,7 +180,7 @@
                 <div class="col-md-2">
                   <div class="form-group">
                     <label>RT</label>
-                    <select name="rt" class="form-control">
+                    <select name="rt" class="form-control" required>
   											<option value="01"
                         @if($penduduk->rt == '01') selected @endif
                          {{(old('rt') == '01') ? 'selected' : ''}}>01</option>
@@ -202,7 +202,7 @@
                 <div class="col-md-2">
                   <div class="form-group">
                     <label>RW</label>
-                    <select name="rw" class="form-control">
+                    <select name="rw" class="form-control" required>
                         <option value="01"
                         @if($penduduk->rw == '01') selected @endif
                         {{(old('rw') == '01') ? 'selected' : ''}}>01</option>
@@ -220,13 +220,13 @@
                     <label>Kewarganegaraan</label>
                     <div class="input-group">
                     <div class="d-inline-block custom-control custom-radio mr-1">
-                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNI" id="WNI"
+                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNI" id="WNI" required
                         @if($penduduk->kewarganegaraan == 'WNI') checked @endif
                         {{(old('kewarganegaraan') == 'WNI') ? 'checked' : ''}}>
                         <label class="custom-control-label" for="WNI">WNI</label>
                       </div>
                       <div class="d-inline-block custom-control custom-radio">
-                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNA" id="WNA"
+                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNA" id="WNA" required
                         @if($penduduk->kewarganegaraan == 'WNA') checked @endif
                         {{(old('kewarganegaraan') == 'WNA') ? 'checked' : ''}}>
                         <label class="custom-control-label" for="WNA">WNA</label>

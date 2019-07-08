@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Penduduk;
 use App\Keluarga;
+use DB;
 
 class AdminController extends Controller
 {
@@ -14,7 +15,7 @@ class AdminController extends Controller
 
     public function index(){
       $penduduk = Penduduk::all();
-      $keluarga = Keluarga::all();
+      $keluarga = DB::table('keluargas')->select('keluargas.no_kk')->groupBy('keluargas.no_kk')->get();
       return view('pages.dashboard',compact('penduduk','keluarga'));
     }
 }

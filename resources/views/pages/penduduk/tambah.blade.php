@@ -38,7 +38,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="userinput1">NIK</label>
-                    <input type="text" onkeypress="return hanyaAngka(event)" value="{{old('nik')}}" class="form-control @error('nik') border-danger is-invalid @enderror" placeholder="Masukan NIK" name="nik" autofocus>
+                    <input type="text" onkeypress="return hanyaAngka(event)" value="{{old('nik')}}" class="form-control @error('nik') border-danger is-invalid @enderror" placeholder="Masukan NIK" name="nik" autofocus required>
                     @error('nik')
                         <span class="invalid-feedback" role="alert">
                             <strong>@if($message == 'validation.min.string')
@@ -54,7 +54,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" class="form-control @error('nama') border-danger is-invalid @enderror" value="{{old('nama')}}" placeholder="Masukan Nama" name="nama" autofocus>
+                    <input type="text" class="form-control @error('nama') border-danger is-invalid @enderror" value="{{old('nama')}}" placeholder="Masukan Nama" name="nama" autofocus required>
                     @error('nama')
                         <span class="invalid-feedback" role="alert">
                             <strong>Nama Minimal 3 karakter</strong>
@@ -67,11 +67,11 @@
                     <label>Jenis Kelamin</label>
                     <div class="input-group">
                     <div class="d-inline-block custom-control custom-radio mr-1">
-												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Laki-laki" id="Laki-laki" {{(old('jenis_kelamin') == 'Laki-laki') ? 'checked' : ''}}>
+												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Laki-laki" id="Laki-laki" {{(old('jenis_kelamin') == 'Laki-laki') ? 'checked' : ''}} required>
 												<label class="custom-control-label" for="Laki-laki">Laki-laki</label>
 											</div>
 											<div class="d-inline-block custom-control custom-radio">
-												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Perempuan" id="Perempuan" {{(old('jenis_kelamin') == 'Perempuan') ? 'checked' : ''}}>
+												<input type="radio" name="jenis_kelamin" class="custom-control-input" value="Perempuan" id="Perempuan" {{(old('jenis_kelamin') == 'Perempuan') ? 'checked' : ''}} required>
 												<label class="custom-control-label" for="Perempuan">Perempuan</label>
 											</div>
                     </div>
@@ -80,7 +80,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Tempat Lahir</label>
-                    <input type="text" class="form-control @error('tempat_lahir') border-danger is-invalid @enderror" value="{{old('tempat_lahir')}}" placeholder="Masukan Tempat Lahir" name="tempat_lahir">
+                    <input type="text" class="form-control @error('tempat_lahir') border-danger is-invalid @enderror" value="{{old('tempat_lahir')}}" placeholder="Masukan Tempat Lahir" name="tempat_lahir" required>
                     @error('tempat_lahir')
                         <span class="invalid-feedback" role="alert">
                             <strong>Tempat Lahir Terlalu Pendek</strong>
@@ -93,13 +93,13 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Tanggal Lahir</label>
-                    <input type="date" value="{{old('tgl_lahir')}}" class="form-control border-primary" name="tgl_lahir">
+                    <input type="date" value="{{old('tgl_lahir')}}" class="form-control border-primary" name="tgl_lahir" required>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Agama</label>
-                    <select name="agama" class="form-control">
+                    <select name="agama" class="form-control" required>
   											<option value="Islam" {{(old('agama') == 'Islam') ? 'selected' : ''}}>Islam</option>
   											<option value="Kristen" {{(old('agama') == 'Kristen') ? 'selected' : ''}}>Kristen</option>
   											<option value="Hindu" {{(old('agama') == 'Hindu') ? 'selected' : ''}}>Hindu</option>
@@ -110,7 +110,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label>Pendidikan</label>
-                    <select name="pendidikan" class="form-control">
+                    <select name="pendidikan" class="form-control" required>
   											<option value="SD" {{(old('pendidikan') == 'SD') ? 'selected' : ''}}>SD</option>
   											<option value="SMP" {{(old('pendidikan') == 'SMP') ? 'selected' : ''}}>SMP</option>
   											<option value="SMA" {{(old('pendidikan') == 'SMA') ? 'selected' : ''}}>SMA</option>
@@ -123,7 +123,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Pekerjaan</label>
-                    <input type="text" class="form-control @error('pekerjaan') border-danger is-invalid @enderror" value="{{old('pekerjaan')}}" placeholder="Masukan Pekerjaan" name="pekerjaan">
+                    <input type="text" class="form-control @error('pekerjaan') border-danger is-invalid @enderror" value="{{old('pekerjaan')}}" placeholder="Masukan Pekerjaan" name="pekerjaan" required>
                     @error('pekerjaan')
                         <span class="invalid-feedback" role="alert">
                             <strong>Pekerjaan Terlalu Pendek</strong>
@@ -138,11 +138,11 @@
                     <label>Status Perkawinan</label>
                     <div class="input-group">
                     <div class="d-inline-block custom-control custom-radio mr-1">
-                        <input type="radio" name="perkawinan" class="custom-control-input" value="Menikah" id="Menikah" {{(old('perkawinan') == 'Menikah') ? 'checked' : ''}}>
+                        <input type="radio" name="perkawinan" class="custom-control-input" value="Menikah" id="Menikah" {{(old('perkawinan') == 'Menikah') ? 'checked' : ''}} required>
                         <label class="custom-control-label" for="Menikah">Menikah</label>
                       </div>
                       <div class="d-inline-block custom-control custom-radio">
-                        <input type="radio" name="perkawinan" class="custom-control-input" value="Belum Menikah" id="Belum" {{(old('perkawinan') == 'Belum Menikah') ? 'checked' : ''}}>
+                        <input type="radio" name="perkawinan" class="custom-control-input" value="Belum Menikah" id="Belum" {{(old('perkawinan') == 'Belum Menikah') ? 'checked' : ''}} required>
                         <label class="custom-control-label" for="Belum">Belum Menikah</label>
                       </div>
                     </div>
@@ -151,7 +151,7 @@
                 <div class="col-md-2">
                   <div class="form-group">
                     <label>RT</label>
-                    <select name="rt" class="form-control">
+                    <select name="rt" class="form-control" required>
   											<option value="01" {{(old('rt') == '01') ? 'selected' : ''}}>01</option>
   											<option value="02" {{(old('rt') == '02') ? 'selected' : ''}}>02</option>
   											<option value="03" {{(old('rt') == '03') ? 'selected' : ''}}>03</option>
@@ -163,7 +163,7 @@
                 <div class="col-md-2">
                   <div class="form-group">
                     <label>RW</label>
-                    <select name="rw" class="form-control">
+                    <select name="rw" class="form-control" required>
                         <option value="01" {{(old('rw') == '01') ? 'selected' : ''}}>01</option>
                         <option value="02" {{(old('rw') == '02') ? 'selected' : ''}}>02</option>
                         <option value="03" {{(old('rw') == '03') ? 'selected' : ''}}>03</option>
@@ -175,11 +175,11 @@
                     <label>Kewarganegaraan</label>
                     <div class="input-group">
                     <div class="d-inline-block custom-control custom-radio mr-1">
-                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNI" id="WNI" {{(old('kewarganegaraan') == 'WNI') ? 'checked' : ''}}>
+                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNI" id="WNI" {{(old('kewarganegaraan') == 'WNI') ? 'checked' : ''}} required>
                         <label class="custom-control-label" for="WNI">WNI</label>
                       </div>
                       <div class="d-inline-block custom-control custom-radio">
-                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNA" id="WNA" {{(old('kewarganegaraan') == 'WNA') ? 'checked' : ''}}>
+                        <input type="radio" name="kewarganegaraan" class="custom-control-input" value="WNA" id="WNA" {{(old('kewarganegaraan') == 'WNA') ? 'checked' : ''}} required>
                         <label class="custom-control-label" for="WNA">WNA</label>
                       </div>
                     </div>

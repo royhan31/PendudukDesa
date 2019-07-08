@@ -15,11 +15,13 @@ class CreateKeluargasTable extends Migration
     {
         Schema::create('keluargas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('no_kk', 16)->unique();
-            $table->bigInteger('id_penduduk')->unsigned();
+            $table->char('no_kk', 16);
+            $table->bigInteger('id_penduduk')->unsigned()->unique();
             $table->string('hubungan_kelurga');
             $table->boolean('deleted_at')->default(false);
             $table->timestamps();
+
+            $table->foreign('id_penduduk')->references('id')->on('penduduks');
         });
     }
 
