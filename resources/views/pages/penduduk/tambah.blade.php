@@ -38,7 +38,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="userinput1">NIK</label>
-                    <input type="text" onkeypress="return hanyaAngka(event)" value="{{old('nik')}}" class="form-control @error('nik') border-danger is-invalid @enderror" placeholder="Masukan NIK" name="nik" autofocus required>
+                    <input type="text" maxlength="16" onkeypress="return hanyaAngka(event)" value="{{old('nik')}}" class="form-control @error('nik') border-danger is-invalid @enderror" placeholder="Masukan NIK" name="nik" autofocus required>
                     @error('nik')
                         <span class="invalid-feedback" role="alert">
                             <strong>@if($message == 'validation.min.string')
